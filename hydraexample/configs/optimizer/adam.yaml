@@ -1,3 +1,3 @@
-_target_: hydra_example.optimizer.adam.Adam
+_target_: hydraexample.optimizer.adam.Adam
 lr: 1.5
 beta: 0.5
