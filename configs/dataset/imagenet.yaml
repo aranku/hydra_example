@@ -1,0 +1,3 @@
+_target_: hydra_example.dataset.image_dataset.ImageDataset
+name: imagenet
+path: "https://www.image-net.org/download.php"

@@ -1,2 +1,5 @@
 defaults:
-  -
+  - optimizer: adam
+  - dataset: imagenet
+
+_target_: hydra_example.trainer.Trainer

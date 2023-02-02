@@ -1,0 +1,2 @@
+_target_: hydra_example.optimizer.sgd.SGD
+lr: 1.5
