@@ -1,5 +1,6 @@
 from typing import Callable
 import functools
+import hydra
 
 def instantiate(config):
     # Case 1: no config
@@ -17,7 +18,7 @@ def instantiate(config):
     else:
         raise NotImplementedError("instantiate target must be string or callable")
 
-    obj = functools.partial(fn)
+    obj = functools.partial(fn, **config)
 
     # Restore _name_
     if _target_ is not None:
