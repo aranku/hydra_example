@@ -1,8 +1,10 @@
 from hydraexample.optimizer.optimizer import Optimizer
 from hydraexample.dataset.dataset import Dataset
 from flax import linen as nn
+from dataclasses import dataclass
 
+@dataclass
 class Trainer:
-    def __init__(self, optimizer: Optimizer, dataset: Dataset, model: nn.Module) -> None:
-        self.optimizer = optimizer
-        self.dataset = dataset
+    optimizer: Optimizer
+    dataset: Dataset
+    model: nn.Module
