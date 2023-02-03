@@ -1,7 +1,9 @@
 from flax import linen as nn
 
 class MLP(nn.Module):
-  def setup(self, features: int):
+  features: int
+  
+  def setup(self):
     # Submodule names are derived by the attributes you assign to. In this
     # case, "dense1" and s"dense2". This follows the logic in PyTorch.
     self.dense1 = nn.Dense(features)

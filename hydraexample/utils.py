@@ -1,4 +1,4 @@
-from typing import Callable
+from typing import Callable, Mapping
 import functools
 import hydra
 
@@ -18,6 +18,10 @@ def instantiate(config):
     else:
         raise NotImplementedError("instantiate target must be string or callable")
 
+    config = {
+      k:instantiate(v) if isinstance(v,Mapping) and "_target_" in v else v 
+      for k,v in config.items()
+    }
     obj = functools.partial(fn, **config)
 
     # Restore _name_
