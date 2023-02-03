@@ -1,0 +1,2 @@
+_target_: hydraexample.model.mlp.MLP
+features: 32

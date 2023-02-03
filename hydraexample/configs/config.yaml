@@ -1,5 +1,6 @@
 defaults:
   - optimizer: adam
   - dataset: imagenet
+  - model: mlp
 
 _target_: hydraexample.trainer.Trainer
