@@ -1,3 +1,3 @@
-_target_: hydra_example.dataset.text_dataset.TextDataset
+_target_: hydraexample.dataset.text_dataset.TextDataset
 name: translation
 path: "https://www.statmt.org/wmt14/translation-task.html"
